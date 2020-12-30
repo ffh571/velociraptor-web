@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -871,7 +892,7 @@ any Top Private Domain as an Authorized Domain.</p>
 
 <p>In this example we assume that you purchased your domain with Google
 domains which makes this step easier since it is already verified.</p>
-<p>We can go back to the cloud console and <code>Create Credentials/OAuth client ID</code>:</p>
+<p>We can go back to the cloud console and <code>Create Credentials/OAuth client ID</code>:</p>
 <p><img src="../sso15.png" alt="11"></p>
 <p>Now select <code>Web App</code> and we must set the <code>Authorized redirect URIs</code> to
 <code>https://&lt;Your Domain Name&gt;/auth/google/callback</code> -
@@ -879,7 +900,7 @@ This is the URL that successful OAuth authentication will redirect
 to. Velociraptor accepts this redirect and uses it to log the user on.</p>
 <p><img src="../sso16.png" alt="11"></p>
 <p>If all goes well the Google cloud console will give us a client ID and
-a client secret. Now we are ready to select <code>Authenticate users with Google OAuth SSO</code> from the guided installation wizard.</p>
+a client secret. Now we are ready to select <code>Authenticate users with Google OAuth SSO</code> from the guided installation wizard.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ velociraptor config generate -i
 ?
 Welcome to the Velociraptor configuration generator
@@ -939,7 +960,7 @@ eye candy :-).</p>
 <div class="notices note" ><p>Velociraptor will retain its OAuth token for 24 hours. Each day users
 will need to re-grant OAuth credentials. Therefore revoking a user
 from the Google Admin console may take a full day to take effect. To
-remove access sooner you should use <code>velociraptor --config server.config.yaml user lock MyUserName</code> at the console.</p>
+remove access sooner you should use <code>velociraptor --config server.config.yaml user lock MyUserName</code> at the console.</p>
 </div>
 
 <h2 id="deploying-to-the-cloud">Deploying to the cloud</h2>

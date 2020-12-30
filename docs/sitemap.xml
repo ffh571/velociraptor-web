@@ -51,7 +51,22 @@
   </url>
   
   <url>
+    <loc>/about/compare/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/development/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/features/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/contact-info/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   

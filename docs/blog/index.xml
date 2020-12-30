@@ -357,7 +357,7 @@ This is not the whole story though! It is also possible to run VQL queries on th
       
       <guid>/blog/html/2018/12/09/more_on_client_event_collection.html</guid>
       <description>Periodic Event queries The simplest kind of events are periodically generated events. These are created using the clock() VQL plugin. This is a simple event plugin which just emits a new row periodically.
-$ velociraptor query &amp;quot;select Unix from clock(period=5)&amp;quot; --max_wait 1 [ { &amp;quot;Unix&amp;quot;: 1544339715 } ][ { &amp;quot;Unix&amp;quot;: 1544339720 } ]^C The query will never terminate, instead the clock() plugin will emit a new timestamp every 5 seconds. Note the --max_wait flag which tells Velociraptor to wait at least for 1 second in order to batch rows before reporting them.</description>
+$ velociraptor query &amp;quot;select Unix from clock(period=5)&amp;quot; --max_wait 1[{&amp;quot;Unix&amp;quot;: 1544339715}][{&amp;quot;Unix&amp;quot;: 1544339720}]^CThe query will never terminate, instead the clock() plugin will emit a new timestamp every 5 seconds. Note the --max_wait flag which tells Velociraptor to wait at least for 1 second in order to batch rows before reporting them.</description>
     </item>
     
     <item>
@@ -409,7 +409,7 @@ I was watching the SANS DFIR Summit 2018 videos on youtube and came across Mari 
       
       <guid>/blog/html/2018/09/03/velociraptor_walk_through_and_demo.html</guid>
       <description>I just uploaded a screencast of the latest Velociraptor - check it out and play with it, and please provide feedback at velociraptor-discuss@googlegroups.com
-  </description>
+</description>
     </item>
     
     <item>

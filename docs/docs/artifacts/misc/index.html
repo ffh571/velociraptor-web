@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -3385,13 +3406,13 @@ sources:
 </div>
 <h2 id="windowstimelinemft">Windows.Timeline.MFT</h2>
 <h1 id="output-all-filtered-mft-records">Output all filtered MFT records.</h1>
-<p>This Artifact enables querying the MFT with advanced filters
+<p>This Artifact enables querying the MFT with advanced filters 
 such as time, path or other ntfs attributes.</p>
 <p>Output is to Timeline field format to enable simple review accross Timeline
-queries. The TimeOutput paramater enables configuring which NTFS attribute
-timestamps are in focus as event_time. for example:
+queries. The TimeOutput paramater enables configuring which NTFS attribute 
+timestamps are in focus as event_time. for example: 
 STANDARD_INFORMATION (4), FILE_NAME (4) or ALL (8)</p>
-<p>This artifact also has the same anomaly logic as AnalyzeMFT added to
+<p>This artifact also has the same anomaly logic as AnalyzeMFT added to 
 each row to assist analysis.</p>
 <table>
 <thead>
@@ -3692,7 +3713,7 @@ the system records properties about the executable to make it faster
 to run next time. By parsing this information we are able to
 determine when binaries are run in the past. On Windows10 we can see
 the last 8 execution times and creation time (9 potential executions).</p>
-<p>This artifact is a timelined output version of the standard Prefetch
+<p>This artifact is a timelined output version of the standard Prefetch 
 artifact. There are several parameter&rsquo;s availible.</p>
 <ul>
 <li>dateAfter enables search for prefetch evidence after this date.</li>
@@ -3867,12 +3888,12 @@ sources:
 <h1 id="output-all-available-runmru-registry-keys-in-timeline-format">Output all available RunMRU registry keys in timeline format.</h1>
 <p>RunMRU is when a user enters a command into the START &gt; Run prompt.<br>
 Entries will be logged in the user hive under:    Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU</p>
-<p>The artifact numbers all entries with the most recent at
+<p>The artifact numbers all entries with the most recent at 
 reg_mtime starting at 0. Second recent 1, Third recent 2 etc.</p>
 <p>Default output enables a line per MRU entry.<br>
 A tickbox enables Grouped results with order in a single line.</p>
-<p>Note: This artifact will collect RunMRU from ntuser.dat files and
-may exclude very recent entries in transaction (HKCU).  Future
+<p>Note: This artifact will collect RunMRU from ntuser.dat files and 
+may exclude very recent entries in transaction (HKCU).  Future 
 versions of this content will address this gap.</p>
 <table>
 <thead>

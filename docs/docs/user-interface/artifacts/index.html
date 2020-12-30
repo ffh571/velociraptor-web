@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -731,44 +752,44 @@ user. Therefore they are defined using YAML in a simple human readable
 file format.</p>
 <p>Below is an example of a typical artifact definition.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Windows.Sys.Users</span>
-<span style="color:#f92672">description</span>: <span style="color:#e6db74">|
+<span style="color:#f92672">description</span>: |<span style="color:#e6db74">
 </span><span style="color:#e6db74">  List User accounts that were logged into the machine in the past by
 </span><span style="color:#e6db74">  searching for registry artifacts.
 </span><span style="color:#e6db74">
-</span><span style="color:#e6db74">  What local or domain users have previously logged into an endpoint?
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">parameters:
-</span><span style="color:#e6db74">  - name: remoteRegKey
-</span><span style="color:#e6db74">    default: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">sources:
-</span><span style="color:#e6db74">  - precondition:
-</span><span style="color:#e6db74">      SELECT OS From info() where OS = &#39;windows&#39;
-</span><span style="color:#e6db74">    queries:
-</span><span style="color:#e6db74">        - SELECT &#34;&#34; as Uid, &#34;&#34; as Gid,
-</span><span style="color:#e6db74">               lookupSID(
-</span><span style="color:#e6db74">                 sid=basename(path=Key.FullPath)
-</span><span style="color:#e6db74">               ) as Name,
-</span><span style="color:#e6db74">               Key.FullPath as Description,
-</span><span style="color:#e6db74">               ProfileImagePath as Directory,
-</span><span style="color:#e6db74">               basename(path=Key.FullPath) as UUID,
-</span><span style="color:#e6db74">               Key.Mtime.Sec as Mtime,
-</span><span style="color:#e6db74">               &#34;roaming&#34; as Type
-</span><span style="color:#e6db74">           FROM read_reg_key(globs=remoteRegKey, accessor=&#34;reg&#34;)
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">reports:
-</span><span style="color:#e6db74">  - type: CLIENT
-</span><span style="color:#e6db74">    template: |
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">      Users that logged in previously.
-</span><span style="color:#e6db74">      ===============================
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">      {{ .Description }}
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">      The following table shows basic information about the users on this system.
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">      {{ Query &#34;users&#34; &#34;SELECT Name, UUID, Type, Mtime FROM source()&#34; | Table }}
-</span></code></pre></div><p>We can see the main sections:</p>
+</span><span style="color:#e6db74">  What local or domain users have previously logged into an endpoint?</span>  
+
+<span style="color:#f92672">parameters</span>:
+  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">remoteRegKey</span>
+    <span style="color:#f92672">default</span>: <span style="color:#ae81ff">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*</span>
+
+<span style="color:#f92672">sources</span>:
+  - <span style="color:#f92672">precondition</span>:
+      <span style="color:#ae81ff">SELECT OS From info() where OS = &#39;windows&#39;</span>
+    <span style="color:#f92672">queries</span>:
+        - <span style="color:#ae81ff">SELECT &#34;&#34; as Uid, &#34;&#34; as Gid,</span>
+               <span style="color:#ae81ff">lookupSID(</span>
+                 <span style="color:#ae81ff">sid=basename(path=Key.FullPath)</span>
+               <span style="color:#ae81ff">) as Name,</span>
+               <span style="color:#ae81ff">Key.FullPath as Description,</span>
+               <span style="color:#ae81ff">ProfileImagePath as Directory,</span>
+               <span style="color:#ae81ff">basename(path=Key.FullPath) as UUID,</span>
+               <span style="color:#ae81ff">Key.Mtime.Sec as Mtime,</span>
+               <span style="color:#e6db74">&#34;roaming&#34;</span> <span style="color:#ae81ff">as Type</span>
+           <span style="color:#ae81ff">FROM read_reg_key(globs=remoteRegKey, accessor=&#34;reg&#34;)</span>
+
+<span style="color:#f92672">reports</span>:
+  - <span style="color:#f92672">type</span>: <span style="color:#ae81ff">CLIENT</span>
+    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">|</span>
+
+      <span style="color:#ae81ff">Users that logged in previously.</span>
+      <span style="color:#ae81ff">===============================</span>
+
+      {{ <span style="color:#ae81ff">.Description }}</span>
+
+      <span style="color:#ae81ff">The following table shows basic information about the users on this system.</span>
+
+      {{ <span style="color:#ae81ff">Query &#34;users&#34; &#34;SELECT Name, UUID, Type, Mtime FROM source()&#34; | Table }}</span>
+</code></pre></div><p>We can see the main sections:</p>
 <ol>
 <li>
 <p>The <code>name</code> of the artifact is a dot separated string used to
@@ -836,7 +857,7 @@ the artifact to both document and guide investigators through the
 investigation process. Even experienced investigators can benefit from
 artifacts, since they do not need to worry about forgetting to collect
 a particular source, or wrongly interpreting some of its finding.</p>
-<p>In the above example, the high level question is <code>What domain users have logged into this endpoint?</code>. To answer this question we extract
+<p>In the above example, the high level question is <code>What domain users have logged into this endpoint?</code>. To answer this question we extract
 registry artifacts created whenever a user gains an interactive logon
 session to a machine. The report helps us to understand what the
 registry artifacts actually mean. We can see the report can run

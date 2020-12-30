@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -944,7 +965,7 @@ no security relationship, unless you choose to implement SSO.</p>
 </div>
 
 <p>You can always add new users to the GUI using the command
-<code>velociraptor --config server.config.yaml user add MyUserName --role administrator</code>. User credentials are usually stored in the data
+<code>velociraptor --config server.config.yaml user add MyUserName --role administrator</code>. User credentials are usually stored in the data
 store and not in the config file (except for the root users created
 with the wizard). If you need to change a user&rsquo;s password simply add
 them again with the new password.</p>

@@ -8,6 +8,31 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>/about/compare/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/about/compare/</guid>
+      <description>Velociraptor vs GRR/ Velociraptor vs OSQuery Velociraptor draws inspiration from two major projects:
+ GRR https://github.com/google/grr OSQuery https://github.com/osquery/osquery  Velociraptor is actively being used by DFIR professionals across cases such as these and continues to grow and develop based on their feedback and ideas.
+Velociraptor vs GRR/ Velociraptor vs OSQuery Velociraptor vs GRR
+   In common Different     Hunting across large number of endpoints Much faster   Can collect file data Lower footprint   Free Open source (FOSS) A flexible query language    Very simple to deploy    Event based queries    Commercially supported FOSS    Velociraptor vs OSQuery    In common Different     Rely on a query language to access machine state VQL is much more powerful and intuitive than SQL   Single binary with no dependencies Can transfer file data   Multi-platform Can modify the system    Remote client/server control and orchestration in the same tool.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/development/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/about/development/</guid>
+      <description>picture: /overview.png
+Deployment overview Typical deployments Velociraptor is very efficient and scalable:
+Server simply collects the results of queries - clients do all the heavy lifting.
+ Client memory and CPU usage is controlled via throttling and active cancellations.  Server is optimized for speed and scalability
+ Concurrency control ensures stability Bandwidth limits ensure network stability  Current recommendations for typical deployments:  10k-15k clients - single server with file based data store (usually cloud VM).</description>
+    </item>
+    
+    <item>
       <title>Velociraptor Features</title>
       <link>/about/features/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
@@ -15,6 +40,15 @@
       <guid>/about/features/</guid>
       <description>To give you a taste of what Velociraptor can do, here are some of the more interesting features:
 Easy setup and deployment  Velociraptor ships as a singe executable which has no dependencies and requires no installation routine Settings are defined by a pair of config files - one for the server and one for each endpoint All comms between endpoints and the server are encrypted The GUI supports SSL and SSO via Google Auth for strong identity management Once an endpoint is started, it&amp;rsquo;s instantly available on the server dashboard (after a browser refresh).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/contact-info/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/about/contact-info/</guid>
+      <description>Where you can find us  We are commonly found in our discord server where we have posted the latest updates. Do you have a question Hop on to discord and join us with your many questions and disires or just to say hi. https://discord.gg/YAU3vRE Or contact us directly through github and our info email. info@velocidex.com https://github.com/Velocidex/velociraptor </description>
     </item>
     
     <item>

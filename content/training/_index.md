@@ -31,6 +31,8 @@ schedule:
   buyurl: https://www.eventbrite.com.au/e/enterprise-hunting-and-incident-response-online-edition-tickets-129418511251
   picture: online_february_2021/globe.jpg
 
+
+
 - title: Velociraptor training (Online edition - US/APAC)
   date: 2th March 2021
   description: |

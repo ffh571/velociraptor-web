@@ -41,13 +41,13 @@ discussions.
 
 |Topic| Time|
 |------| ----|
-|Topic: 01 - Velociraptor Installation and Overview | Time: March 2, 2021 09:00 AM Brisbane|
-|Topic: 02 - VQL Fundamentals | Time: March 3, 2021 09:00 AM Brisbane|
-|Topic: 03 - Forensic Analysis Pt 1 | Time: March 4, 2021 09:00 AM Brisbane|
-|Topic: 04 - Forensic Analysis Pt 2 | Time: March 5, 2021 09:00 AM Brisbane|
-|Topic: 05 - Interactive triage | Time: March 9, 2021 09:00 AM Brisbane|
-|Topic: 06 - Proactive Hunting | Time: March 10, 2021 09:00 AM Brisbane|
-|Topic: 07 - Extending VQL and API | Time: March 11, 2021 09:00 AM Brisbane|
+|Topic: 01 - Velociraptor Installation and Overview |March 2, 2021 09:00 AM Brisbane|
+|Topic: 02 - VQL Fundamentals |March 3, 2021 09:00 AM Brisbane|
+|Topic: 03 - Forensic Analysis Pt 1 |March 4, 2021 09:00 AM Brisbane|
+|Topic: 04 - Forensic Analysis Pt 2 |March 5, 2021 09:00 AM Brisbane|
+|Topic: 05 - Interactive triage |March 9, 2021 09:00 AM Brisbane|
+|Topic: 06 - Proactive Hunting |March 10, 2021 09:00 AM Brisbane|
+|Topic: 07 - Extending VQL and API |March 11, 2021 09:00 AM Brisbane|
 
 
 ## Times in your region

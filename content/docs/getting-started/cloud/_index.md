@@ -15,6 +15,54 @@ they expire).
 In this page we will explore how Velociraptor can be deployed in the
 cloud.
 
+### Quick Overveiw 
+<img src="cloud over view.png" width="600" /></a>
+In this diagram it shows how velocivaptor comunicate in between the cloud.
+
+##### Typical deployments
+Velociraptor is very efficient and scalable:
+
+Server simply collects the results of queries - clients do all the heavy lifting.
+* Client memory and CPU usage is controlled via throttling and active cancellations.
+
+Server is optimized for speed and scalability
+* Concurrency control ensures stability
+* Bandwidth limits ensure network stability
+
+
+Current recommendations for typical deployments:
+* 10k-15k clients - single server with file based data store (usually cloud VM).
+* SSL load is the biggest load - TLS offloading helps a lot!
+* 8 GB RAM/8 cores is generous towards the top of the range.
+* We recommend Ubuntu/Debian server
+* 15-20k endpoints. We recommend a multi-frontend setup with mysql backend.
+
+##### Choices for datastore
+
+Files:
+Default datastore is file based
+* Files are stored in a directory on the server
+Pros
+* Extremely fast
+* Very simple to administer
+* Very easy to export/interoperate with other tools
+Cons
+* Only single frontend on one machine
+* Less scalable
+
+MySQL
+New experimental datastore uses MySQL
+Pros
+* Supports multiple frontends.
+* More scalable (more endpoints)
+Cons
+* Less fast due to MySQL/network overheads
+* Slightly harder to administer
+* Restricted to using the API to export and interoperate with other tools
+
+
+#### Now to get started.   YAY!!!
+
 ## Getting a domain name
 
 An SSL certificate says that the DNS name is owned by the server which
@@ -216,6 +264,54 @@ to. Velociraptor accepts this redirect and uses it to log the user on.
 If all goes well the Google cloud console will give us a client ID and
 a client secret. Now we are ready to select `Authenticate users with
 Google OAuth SSO` from the guided installation wizard.
+
+##### Now 
+* Fetch the latest Velociraptor Windows and Linux release binaries
+
+##### Generate configuration files
+
+Create a new configuration
+* Do the command prompt (or other machiens cmd) in administrator mode “(Velociraptor.exe file) config generate -i” and answer the questions. Make sure you have all your credentials ready like dns etc. . 
+
+Note that you will have to be in the same file location as where velociraptor.exe is at and that velociraptor.exe refers to the version of velociraptor.
+
+##### Build debian packages and install
+
+* To build the debian packages and install it we need to be in the program on the cmd as admin. 
+* We first type “(The file name of the velociraptor exe file) --config server.config.yaml debian -h” to get the .deb file that we need to use. 
+* Now make sure we download a linux version as well unless this is ran on linux (https://github.com/Velocidex/velociraptor/releases). 
+* Now we use this linux file and type “(The file name of the Velociraptor exe file) --config server.config.yaml debian server --binary(Linux exe file)”. 
+* To check if this worked type “dir” in the cmd and check for the .deb file like in the picture below. 
+
+<img src="dir.png" width="600" /></a>
+
+##### Use the password to set up and log into the server. Also to download the last file.
+	
+	
+* Now we use the new deb file and use scp to the target server by typing “scp (The Velociraptor.deb file) (Username)@(ip address of vm):/tmp/ (The /tmp/ can be change to any directory that you would like to put it in)”. 
+* Then we must continue to connect and put your password in which it will then install a file. 
+* Now type “ssh (Username)(ip address of vm)” (which is the same as above). This will put us in the vanilla vm. 
+* Now to install the last package we type “sudo dpkg -i /tmp(or where you put the file in)/(Velociraptor.deb file)” which installed the last package. 
+	
+##### Build MSI packages for Windows
+
+* To install the msi we need to get to the Velociraptor github page and download the zip file of the code like shown in the picture.
+
+<img src="" width="600" /></a>
+
+* Once it is downloaded go into the file and go into docs and then copy wix like shown in the picture below.
+
+<img src="" width="600" /></a>
+
+* Then paste to what every destination you choose but I chose the download file. 
+* Now go back to the previous cmd and type “exit” to exit the vm. 
+* Then type “cd wix” to go to the wix file. 
+* Now we type “mkdir output” then afterwards type in a new line “copy ..\client.config.yaml output”. 
+* Now we type “copy ..\(The Windows version of Velociraptor.exe) output\velociraptor.exe” and this will allow the msi files to work. 
+* Now to type “build_custom.bat” and make note that if u don’t have the wix program it won’t work (https://wixtoolset.org/releases/).  
+* Now we type “msiexec .i custom.msi” which has installed the last part. 
+
+
 
 ```text
 $ velociraptor config generate -i

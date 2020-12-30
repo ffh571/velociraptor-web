@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -1797,12 +1818,12 @@ sources:
 </code></pre></div>   </div>
 </div>
 <h2 id="windowseventlogssymantec">Windows.EventLogs.Symantec</h2>
-<p>Query the Symantec Endpoint Protection Event Logs. The default artifact will
-return EventId 51 and high value strings with goals bubble up some events for
+<p>Query the Symantec Endpoint Protection Event Logs. The default artifact will 
+return EventId 51 and high value strings with goals bubble up some events for 
 triage.</p>
 <p>Note:<br>
 EventID selection is controlled by regex to allow multiple EID selections.<br>
-If running a hunt, consider also hunting EventId 45 - Tamper Protection
+If running a hunt, consider also hunting EventId 45 - Tamper Protection 
 Detection (this will be noisy so whitelist is required).<br>
 IgnoreRegex allows filtering out events relevant to the target environment.</p>
 <table>

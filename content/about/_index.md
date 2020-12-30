@@ -19,10 +19,7 @@ toc: false
 
 ## So what is Velociraptor?
 
-Velociraptor is a unique, advanced open-source endpoint monitoring, digital forensic and cyber response platform.
-
-It was originally developed by DFIR professionals who needed a powerful and efficient way to hunt and monitor activities across fleets of endpoints for specific artefacts, in a wide range of digital forensic and cyber incident response investigations such as:
-
+Well velociraptor is a powerful open source DFIR tool and framework. Velociraptor is deployed in a cloud environment. And is easy to use once you get the hang of it. Velociraptor a powerful and efficient way to hunt and monitor activities across fleets of endpoints for specific artefacts, in a wide range of digital forensic and cyber incident response investigations such as:
 * Responding to data breaches
 * Reconstructing attacker activities through digital forensic analysis
 * Hunting for evidence of sophisticated adversaries
@@ -31,7 +28,19 @@ It was originally developed by DFIR professionals who needed a powerful and effi
 * Disclosure of confidential information outside the network
 * Gathering endpoint data over time, for use in threat hunting and future investigations.
 
+It is powered through the Velociraptor Query Language (VQL). VQL is used for everything:
+* Collecting information from endpoints (also called clients)
+* Controlling monitoring and response on endpoints
+* Controlling and managing the Velociraptor server.
+
+Velociraptor draws inspiration from two major projects:
+*   GRR  https://github.com/google/grr
+*   OSQuery https://github.com/osquery/osquery
+
+[About GRR and OSQuery](../about/compare)
+
 Velociraptor is actively being used by DFIR professionals across cases such as these and continues to grow and develop based on their feedback and ideas.
+
 
 ## VQL - the Velociraptor difference
 
@@ -107,23 +116,10 @@ The design goals of Velociraptor that we're working towards, are to be:
 * **Quick** - performance should be speedy and resource impact low, while allowing performance to be managed when needed
 * **Reliable** - each feature and artefact should work as expected and be relatively free of bugs and issues
 
-## We're still a work in progress
-
-Although Velociraptor is already being used on real-life DFIR cases, it's still early days and is very much a work in progress.
-
-Our roadmap includes many exciting features and developments, including:
-
-* Expanding the artefact library, including individual artefacts and 'artefact packs' for even more powerful collection and analysis
-* More artefact parsers to allow for analysis of artefacts and data reuse and cross-referencing directly on the server
-* More monitoring artefacts, for real-time event detection and alerting
-* Artefacts for OSX and Linux, since we already have clients for these
-* Further documentation, especially within artefacts in the GUI, so users don't have to be DFIR experts
-* A kernel driver for Windows, providing tighter integration with operating system event monitoring
-* Improving the user interface, including richer features and more automated reporting
-
 ## Send us your feedback
 
 We welcome all ideas and suggestions on how Velociraptor could be used and improved and encourage our users to get in touch.
+
 
 <!-- Insert contact details
 You can connect with us via:

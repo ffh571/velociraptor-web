@@ -5,20 +5,13 @@ keywords: [usage,docs]
 weight: 5
 ---
 
-## Quick start
 
-**Just want the latest version?** Sure, it's freely available on our
-  [Github releases](https://github.com/Velocidex/velociraptor/releases) page.
 
-<!-- **Want some ideas on what Velociraptor can do?** Have a look at
-some [Use Cases](../use_cases) that we've developed based on real-life
-cases.  -->
 
-We also recommend you review our [Getting Started](../getting-started)
-documentation, which guides you through setup and running your first
-hunts.
 
-## Other setup options
+## Setup options
+
+
 
 Velociraptor can be used in many different contexts and deployed in
 different ways.
@@ -36,3 +29,13 @@ different ways.
     artefacts from multiple endpoints simultaneously, for later
     analysis and preservation, as described under
     [Triaging](./triaging)
+
+
+
+
+**Just want the latest version?** Sure, it's freely available on our
+  [Github releases](https://github.com/Velocidex/velociraptor/releases) page.
+
+<!-- **Want some ideas on what Velociraptor can do?** Have a look at
+some [Use Cases](../use_cases) that we've developed based on real-life
+cases.  -->

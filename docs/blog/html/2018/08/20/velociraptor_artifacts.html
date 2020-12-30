@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -932,9 +953,7 @@ line. Each record consists of possible fields.</p>
             file=linuxDpkgStatus,
             regex='(?sm)^(?P&lt;Record&gt;Package:.+?)\\n\\n')
 </code></pre><blockquote>
-<ul>
-<li></li>
-</ul>
+<p>-</p>
 <pre><code>SELECT Record.Package as Package,
 
 :   Record.InstalledSize as InstalledSize, Record.Version as

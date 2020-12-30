@@ -73,10 +73,31 @@
       <a href="/about/">About Velociraptor</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/about/compare/" class="dd-item">
+        <div>
+          <a href="/about/compare/">
+            Compare
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/development/" class="dd-item">
+        <div>
+          <a href="/about/development/">
+            Deployment overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/about/features/" class="dd-item">
         <div>
           <a href="/about/features/">
             Velociraptor Features
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/about/contact-info/" class="dd-item">
+        <div>
+          <a href="/about/contact-info/">
+            Where we can be found
           </a>
         </div>
     </li>
@@ -1180,16 +1201,16 @@ sources:
 </code></pre></div>   </div>
 </div>
 <h2 id="windowsregistryportproxy">Windows.Registry.PortProxy</h2>
-<p><strong>Description</strong>:
-This artifact will return any items in the Windows PortProxy service
+<p><strong>Description</strong>: 
+This artifact will return any items in the Windows PortProxy service 
 registry path. The most common configuration of this service is via the
-lolbin netsh.exe; Metaspoit and other common attack tools also have
+lolbin netsh.exe; Metaspoit and other common attack tools also have 
 configuration modules.</p>
 <p><strong>Reference</strong>: [Port Proxy detection]
 (<a href="http://www.dfirnotes.net/portproxy_detection/">http://www.dfirnotes.net/portproxy_detection/</a>)</p>
 <p><strong>ATT&amp;CK</strong>: <a href="https://attack.mitre.org/techniques/T1090/">T1090 - Connection Proxy</a><br>
 Adversaries may use a connection proxy to direct network traffic between
-systems or act as an intermediary for network communications to a command
+systems or act as an intermediary for network communications to a command 
 and control server to avoid direct connections to their infrastructure.</p>
 <table>
 <thead>
